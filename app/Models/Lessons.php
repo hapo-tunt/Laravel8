@@ -19,7 +19,8 @@ class Lessons extends Model
         'times',
     ];
 
-    public function users(){
+    public function users()
+    {
         return $this->belongsToMany(Users::class, 'users_lessons', 'lessons_id', 'users_id');
     }
 
