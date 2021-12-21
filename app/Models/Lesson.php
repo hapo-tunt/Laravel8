@@ -4,10 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Lessons extends Model
+class Lesson extends Model
 {
-    use HasFactory;
+    use HasFactory, SoftDeletes;
 
     protected $table = 'lessons';
 
@@ -16,7 +17,7 @@ class Lessons extends Model
         'title',
         'description',
         'requirments',
-        'times',
+        'time',
     ];
 
     public function users()
