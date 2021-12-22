@@ -14,12 +14,12 @@ class CreateDocumentsTable extends Migration
     public function up()
     {
         Schema::create('documents', function (Blueprint $table) {
-            $table->id();
-            $table->integer('lessons_id');
+            $table->increments('id');
+            $table->integer('lessons_id')->nullable();
             $table->string('preview')->nullable();
-            $table->string('name');
-            $table->string('title');
-            $table->binary('file');
+            $table->string('name')->nullable();
+            $table->string('title')->nullable();
+            $table->string('file')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

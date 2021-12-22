@@ -14,9 +14,9 @@ class CreateLessonsTable extends Migration
     public function up()
     {
         Schema::create('lessons', function (Blueprint $table) {
-            $table->id();
-            $table->integer('courses_id');
-            $table->string('title');
+            $table->increments('id');
+            $table->integer('courses_id')->nullable();
+            $table->string('title')->nullable();
             $table->string('description')->nullable();
             $table->string('requirments')->nullable();
             $table->dateTime('time')->nullable();
