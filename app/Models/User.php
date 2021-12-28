@@ -21,7 +21,7 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'avatar',
-        'users_name',
+        'username',
         'password',
         'role',
         'full_name',
@@ -67,5 +67,10 @@ class User extends Authenticatable
     public function courses()
     {
         return $this->belongsToMany(Courses::class, 'users_courses', 'users_id', 'courses_id');
+    }
+
+    public function setPasswordAttribute($value)
+    {
+        $this->attributes['password'] = bcrypt($value);
     }
 }
