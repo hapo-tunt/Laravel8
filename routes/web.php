@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home.index');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home.index');
 
 Route::group(['namespace' => 'App\Http\Controllers\Auth'], function () {
     Route::group(['middleware' => ['guest']], function () {
