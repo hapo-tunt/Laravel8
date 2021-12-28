@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Cookie;
 
 trait RememberMeExpiration
 {
-    protected $minutesExpiration = 43200; 
+    protected $minutesExpiration = 43200;
 
     public function setRememberMeExpiration($user)
     {
