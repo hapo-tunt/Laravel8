@@ -14,10 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home.index');
 
-Route::group(['namespace' => 'App\Http\Controllers\Auth'], function()
+Route::group(['namespace' => 'App\Http\Controllers\Auth'], function () 
 {  
-    Route::group(['middleware' => ['guest']], function()
-    {
+    Route::group(['middleware' => ['guest']], function () {
         Route::get('/register', 'RegisterController@show')->name('register.show');
         Route::post('/register', 'RegisterControoler@register')->name('register.perform');
 

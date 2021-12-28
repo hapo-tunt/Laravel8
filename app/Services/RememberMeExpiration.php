@@ -16,7 +16,7 @@ trait RememberMeExpiration
 
     protected function setRememberMeValue($user)
     {
-        return $user->id . "|" . $user->remember_token . "|" . $user -> password;
+        return $user->id . "|" . $user->remember_token . "|" . $user->password;
     }
 
     protected function getRememberMeSeesionName()

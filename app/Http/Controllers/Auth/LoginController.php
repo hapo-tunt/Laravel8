@@ -39,9 +39,8 @@ class LoginController extends Controller
         return $this->authenticated($request, $user);
     }
 
-    protected function authenticated(Request $request,$user)
+    protected function authenticated(Request $request, $user)
     {
         return redirect()->intended();
     }
-
 }
